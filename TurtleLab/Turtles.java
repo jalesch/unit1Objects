@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.util.Random;
 
 public class Turtles
 {
@@ -14,5 +15,16 @@ public class Turtles
         t1.forward(100);
         t2.turnRight();
         t2.forward(100);
+        Random generator = new Random();
+        for(int i=1; i<100; i++){
+            int turn1 = generator.nextInt(360);
+            int turn2 = generator.nextInt(360);
+            int d1 = generator.nextInt(200);
+            int d2 = generator.nextInt(200);
+            t1.turn(turn1);
+            t2.turn(turn2);
+            t1.forward(d1);
+            t2.forward(d2);
+         }
     }
 }
